@@ -12,8 +12,8 @@ import javafx.stage.Stage;
  */
 public class App extends Application {
    
-    final int TAM_X_PANTALLA = 240;
-    final int TAM_Y_PANTALLA = 240;
+    final int TAM_X_PANTALLA = 200;
+    final int TAM_Y_PANTALLA = 200;
    
     @Override
     public void start(Stage stage) {
