@@ -3,7 +3,9 @@ package es.albertomarquez.juegodecolores;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
@@ -12,7 +14,7 @@ import javafx.stage.Stage;
  */
 public class App extends Application {
    
-    final int TAM_X_PANTALLA = 200;
+    final int TAM_X_PANTALLA = 500;
     final int TAM_Y_PANTALLA = 200;
    
     @Override
@@ -26,8 +28,19 @@ public class App extends Application {
         Tablero tablero = new Tablero();
         Logica logica = new Logica();
         logica.patronGanador(tablero);
-       // tablero.mostrarTableroConsola();
         paneRoot.getChildren().add(tablero);
+        
+        scene.setOnKeyPressed((KeyEvent event) -> {
+                            switch (event.getCode()) {
+                                case ESCAPE:
+                                    System.out.println("Reinicio");
+                                    
+                                    //Reinicio HBox
+                                    tablero.textFinal.setFill(Color.TRANSPARENT);
+                                    logica.patronGanador(tablero);
+                                    
+                            }
+        });
     }
 
     public static void main(String[] args) {
