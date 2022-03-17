@@ -46,6 +46,7 @@ public class App extends Application {
         logica.patronGanador(tablero);
     }
     
+    //AÑADO UNA IMAGEN AL FONDO Y CREO UN TIMELINE PARA QUE SE MUEVA DE IZQUIERA A DERECHA
     public void fondoPantalla(){
         imgfondo1 = new ImageView();
         imgfondo2 = new ImageView();
