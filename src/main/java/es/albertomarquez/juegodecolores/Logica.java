@@ -1,10 +1,6 @@
 package es.albertomarquez.juegodecolores;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
 import javafx.scene.shape.Rectangle;
 
@@ -70,8 +66,9 @@ public class Logica {
         final char color2 = x [n2];
         final char color3 = x [n3];
         final char color4 = x [n4];
-
-        System.out.println("Patrón ganador:"  + color1 + " " + color2 + " " + color3 + " " + color4);
+       
+        System.out.println("Patrón ganador:"  + VACIO + " " + color2 + " " + color3 + " " + color4);
+       // System.out.println("Patrón ganador:"  + color1 + " " + color2 + " " + color3 + " " + color4);
         
         ganador1 = color1;
         ganador2 = color2;

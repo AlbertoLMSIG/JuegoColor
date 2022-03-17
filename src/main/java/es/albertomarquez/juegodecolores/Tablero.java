@@ -40,7 +40,7 @@ public class Tablero extends GridPane {
         mapa = new Rectangle[tamXTablero][tamYTablero];
         for(int x=0; x<tamXTablero; x=x+1) {
             for(int y=0; y<tamYTablero; y=y+1) {
-                Rectangle casilla = new Rectangle(50,50,Color.BLACK);
+                Rectangle casilla = new Rectangle(50,50,Color.WHITESMOKE);
                 mapa[x][y] = casilla;
                 this.add(casilla,x,y);
                 this.setVgap(5);
@@ -54,7 +54,7 @@ public class Tablero extends GridPane {
         mapa = new Rectangle[tamXTablero][tamYTablero];
         for(int x=0; x<tamXTablero; x=x+1) {
             for(int y=0; y<tamYTablero; y=y+1) {
-                Rectangle casilla = new Rectangle(50,50,Color.BLACK);
+                Rectangle casilla = new Rectangle(50,50,Color.WHITESMOKE);
                 mapa[x][y] = casilla;
                 this.add(casilla,x,y);
                 this.setVgap(5);
@@ -109,7 +109,18 @@ public class Tablero extends GridPane {
                logica.restaurarArr();
                restaurarMapa();
                logica.patronGanador(this);
-           }   
+           } if (logica.rectangulos[0][0] == logica.ganador1 && logica.rectangulos[1][0] == logica.ganador2 && logica.rectangulos[2][0] == logica.ganador3 && logica.rectangulos[3][0] == logica.ganador4){ 
+               System.out.println("Has ganado");
+               posYRect = 2;
+               posXRect = -1;
+               posYmapa = 2;
+               posXmapa = -1;
+               contador++;
+               cont1.setText(String.valueOf(contador));
+               logica.restaurarArr();
+               restaurarMapa();
+               logica.patronGanador(this);
+           }          
            if(logica.rectangulos[3][0] == logica.rojo || logica.rectangulos[3][0] == logica.azul || logica.rectangulos[3][0] == logica.amarillo || logica.rectangulos[3][0] == logica.verde ){  
                posYRect = 2;
                posXRect = -1;               
@@ -121,7 +132,7 @@ public class Tablero extends GridPane {
                logica.restaurarArr(); 
                restaurarMapa(); 
                logica.patronGanador(this); 
-           }          
+           }  
        }        
        );  
        this.add(recRojo,0,6);
@@ -173,7 +184,19 @@ public class Tablero extends GridPane {
                logica.restaurarArr();
                restaurarMapa();
                logica.patronGanador(this);
-           }   
+           }  
+             if (logica.rectangulos[0][0] == logica.ganador1 && logica.rectangulos[1][0] == logica.ganador2 && logica.rectangulos[2][0] == logica.ganador3 && logica.rectangulos[3][0] == logica.ganador4){ 
+               System.out.println("Has ganado");
+               posYRect = 2;
+               posXRect = -1;
+               posYmapa = 2;
+               posXmapa = -1;
+               contador++;
+               cont1.setText(String.valueOf(contador));
+               logica.restaurarArr();
+               restaurarMapa();
+               logica.patronGanador(this);
+           }       
            if(logica.rectangulos[3][0] == logica.rojo || logica.rectangulos[3][0] == logica.azul || logica.rectangulos[3][0] == logica.amarillo || logica.rectangulos[3][0] == logica.verde ){  
                posYRect = 2;
                posXRect = -1;               
@@ -185,7 +208,7 @@ public class Tablero extends GridPane {
                logica.restaurarArr(); 
                restaurarMapa(); 
                logica.patronGanador(this); 
-           }          
+           }             
        }        
        );  
        this.add(recAmarillo,1,6);
@@ -238,7 +261,19 @@ public class Tablero extends GridPane {
                logica.restaurarArr();
                restaurarMapa();
                logica.patronGanador(this);
-           }   
+           } 
+             if (logica.rectangulos[0][0] == logica.ganador1 && logica.rectangulos[1][0] == logica.ganador2 && logica.rectangulos[2][0] == logica.ganador3 && logica.rectangulos[3][0] == logica.ganador4){ 
+               System.out.println("Has ganado");
+               posYRect = 2;
+               posXRect = -1;
+               posYmapa = 2;
+               posXmapa = -1;
+               contador++;
+               cont1.setText(String.valueOf(contador));
+               logica.restaurarArr();
+               restaurarMapa();
+               logica.patronGanador(this);
+           }    
            if(logica.rectangulos[3][0] == logica.rojo || logica.rectangulos[3][0] == logica.azul || logica.rectangulos[3][0] == logica.amarillo || logica.rectangulos[3][0] == logica.verde ){  
                posYRect = 2;
                posXRect = -1;               
@@ -250,7 +285,7 @@ public class Tablero extends GridPane {
                logica.restaurarArr(); 
                restaurarMapa(); 
                logica.patronGanador(this); 
-           }          
+           }               
        }        
        );  
        this.add(recVerde,2,6);
@@ -303,7 +338,19 @@ public class Tablero extends GridPane {
                logica.restaurarArr();
                restaurarMapa();
                logica.patronGanador(this);
-           }   
+           }
+           if (logica.rectangulos[0][0] == logica.ganador1 && logica.rectangulos[1][0] == logica.ganador2 && logica.rectangulos[2][0] == logica.ganador3 && logica.rectangulos[3][0] == logica.ganador4){ 
+               System.out.println("Has ganado");
+               posYRect = 2;
+               posXRect = -1;
+               posYmapa = 2;
+               posXmapa = -1;
+               contador++;
+               cont1.setText(String.valueOf(contador));
+               logica.restaurarArr();
+               restaurarMapa();
+               logica.patronGanador(this);
+           }         
            if(logica.rectangulos[3][0] == logica.rojo || logica.rectangulos[3][0] == logica.azul || logica.rectangulos[3][0] == logica.amarillo || logica.rectangulos[3][0] == logica.verde ){  
                posYRect = 2;
                posXRect = -1;               
@@ -315,7 +362,7 @@ public class Tablero extends GridPane {
                logica.restaurarArr(); 
                restaurarMapa(); 
                logica.patronGanador(this); 
-           }          
+           }           
        }        
        );  
        this.add(recAzul,3,6);     
